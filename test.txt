@@ -1,0 +1,39 @@
+import java.util.StringTokenizer;
+class Demo{  
+private int rno;
+private String nm;
+
+public Demo(int rno,String nm)
+{
+this.rno=rno;
+this.nm=nm;
+}
+
+public String toString()
+{
+return rno+" "+nm;
+}
+
+
+public static void main(String args[]){  
+StringBuffer sb=new StringBuffer("Hello ");  
+sb.append("Java");//now original string is changed  
+System.out.println(sb);//prints Hello Java  
+
+StringBuilder sh=new StringBuilder("Hello ");  
+sh.append("world");//now original string is changed  
+System.out.println(sh);//prints Hello Java  
+
+Demo o=new Demo(11,"abhay");
+System.out.println(o);
+
+StringTokenizer st=new StringTokenizer("my name is abhay"," ");
+while(st.hasMoreTokens())
+{
+System.out.println(st.nextToken());
+}
+}  
+}  
+
+
+
